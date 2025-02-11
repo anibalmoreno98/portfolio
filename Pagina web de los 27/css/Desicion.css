@@ -1,0 +1,21 @@
+/* Estilo para la alerta de bienvenida */
+#welcomeBanner {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+#welcomeMessage {
+    font-weight: bold;
+}
+
+/* Estilo para los botones al hacer hover */
+.option-btn:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+/* Estilo para los iconos */
+.fas {
+    margin: 0 5px;
+}

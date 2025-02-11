@@ -1,0 +1,147 @@
+/* Añadir un poco de estilo para los elementos */
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Estilos para el pie de página */
+  footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #333;
+    color: white;
+    text-align: center;
+  }
+  
+  footer ul {
+    list-style-type: none;
+  }
+  
+  footer ul li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  
+  footer ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  footer ul li a:hover {
+    text-decoration: underline;
+  }
+
+  /* Aseguramos que el pie de página ocupe todo el ancho de la pantalla */
+footer {
+    width: 100%;
+}
+
+/* Si necesitas que los elementos estén distribuidos uniformemente */
+ul.pagination {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0;
+}
+
+ul.pagination li {
+    list-style-type: none;
+}
+
+
+  /* Aplicar la nueva fuente a toda la página */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../image/fondo-bonito.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+  }
+
+  /* Ajustar el color de los textos en ciertas secciones */
+  .container h3, .container h4, .container p, .navbar, footer {
+    color: white;
+  }
+
+  /* Cambiar el fondo de la barra de navegación */
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro transparente */
+  }
+
+  /* Estilo de los botones */
+  .btn-dark {
+    background-color: #1c1c1c;
+    border: none;
+    color: white;
+    font-weight: 500;
+  }
+
+  .btn-dark:hover {
+    background-color: #333;
+  }
+
+  /* Modificar las imágenes para que se vean bonitas en dispositivos móviles */
+  .img-thumbnail {
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Fondo oscuro en el footer */
+  footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  /* Espaciado adicional para que el contenido no se vea pegado */
+  .container.mt-5 {
+    margin-top: 60px;
+  }
+
+  /* Botones dentro del modal */
+  .modal-content {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+  }
+
+  .modal-footer button {
+    background-color: #1c1c1c;
+  }
+  .footer-buttons .btn {
+    color: white;
+    background: transparent;
+    border: none;
+    position: relative;
+  }
+  .footer-buttons .btn::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+  .footer-buttons .btn:hover::after {
+    width: 100%;
+  }
+  .footer-buttons .btn:hover {
+    color: white;
+  }
+
+  /* Añadir margen inferior para dejar espacio con el pie de página */
+  .nostalgia-section {
+    margin-bottom: 50px; /* Ajusta este valor para el espacio con el pie de página */
+  }
+
+  /* Centrar el contenido de la tarjeta de Madei con la imagen */
+  .madei-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }

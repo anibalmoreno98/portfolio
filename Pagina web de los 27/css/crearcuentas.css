@@ -1,0 +1,27 @@
+/* Estilos para el cartel de advertencia */
+.alert-warning {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;  /* Ancho completo */
+    padding: 15px 0;  /* Espaciado adecuado */
+    z-index: 1000;  /* Asegura que se muestre sobre otros elementos */
+    font-size: 16px;  /* Ajusta el tamaño del texto */
+    display: flex;
+    justify-content: center;  /* Centra el contenido */
+    align-items: center;
+    text-align: center;
+}
+
+/* Aseguramos que el icono y el texto se ajusten bien */
+.alert-warning i {
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+/* Para asegurar que el texto sea responsivo en pantallas pequeñas */
+@media (max-width: 767px) {
+    .alert-warning {
+        font-size: 14px;  /* Reducir tamaño de fuente en pantallas pequeñas */
+    }
+}

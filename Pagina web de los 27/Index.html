@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card" style="width: 100%; max-width: 400px;">
+            <div class="card-body">
+                <h3 class="card-title text-center mb-4">Iniciar sesión</h3>
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Usuario</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            <input type="text" class="form-control" id="username" name="usuario" placeholder="Ingresa tu usuario" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                            <input type="password" class="form-control" id="password" name="contraseña" placeholder="Ingresa tu contraseña" required>
+                        </div>
+                    </div>
+
+                    <div id="error-message" class="alert alert-danger d-none" role="alert">
+                        Usuario o contraseña incorrectos.
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">Iniciar sesión</button>
+                </form>
+
+                <div class="mt-3 text-center">
+                    <a href="CrearCuenta.html" class="btn btn-link">¿No tienes una cuenta? Crea una aquí</a>
+                </div>
+
+                <!-- Botón para eliminar todas las cuentas -->
+                <div class="mt-3 text-center">
+                    <button id="deleteAllAccountsBtn" class="btn btn-danger">Eliminar todas las cuentas</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Manejador de evento para el envío del formulario
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const usuario = document.getElementById('username').value;
+            const contraseña = document.getElementById('password').value;
+
+            // Obtener las credenciales almacenadas
+            const storedCredentials = localStorage.getItem(usuario);
+            const errorMessage = document.getElementById('error-message');
+
+            if (storedCredentials) {
+                const userCredentials = JSON.parse(storedCredentials);
+                if (userCredentials.contraseña === contraseña) {
+                    window.location.href = 'Desicion.html';  // Redirigir a la página Desicion.html
+                } else {
+                    errorMessage.classList.remove('d-none');
+                }
+            } else {
+                errorMessage.classList.remove('d-none');
+            }
+        });
+
+        // Manejador de evento para eliminar todas las cuentas
+        document.getElementById('deleteAllAccountsBtn').addEventListener('click', function() {
+            // Confirmación antes de eliminar todas las cuentas
+            const confirmDelete = confirm("¿Estás seguro de que quieres eliminar todas las cuentas guardadas?");
+            if (confirmDelete) {
+                localStorage.clear();  // Eliminar todas las cuentas almacenadas
+                alert('Todas las cuentas han sido eliminadas.');
+            }
+        });
+    </script>
+
+</body>
+</html>
