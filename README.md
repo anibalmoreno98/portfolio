@@ -1,1 +1,3 @@
-hola
+RomanEmpireProject es un proyecto personal de una idea que surge cuando me doy cuenta de que todos tenemos pensamientos recurrentes sobre cualquier tema. La idea de exponer nuestros pensamientos no es más que un pasatiempos que a quien le pique la curiosidad puede acceder a los mismos creandose una cuenta en dicha página e interactuando con los demás usuarios.
+La tecnología utilizada principalmente es el lenguaje de programación Bootstrap mediante el editor de código VisualStudioCode.
+Para ver el proyecto será necesario disponer del repositorio en el que se encuentran todos los archivos html. Una vez nos situemos en el index principal ejecutamos con f5 y una vez ahí podremos navegar por las distintas páginas del proyecto.
